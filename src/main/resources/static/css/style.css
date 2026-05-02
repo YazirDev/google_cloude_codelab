@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: #f5f7fb;
+    color: #202124;
+}
+
+.topbar {
+    background: #1a73e8;
+    color: white;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 880px;
+    margin: 32px auto;
+    padding: 0 16px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
+    margin-bottom: 24px;
+}
+
+.btn-primary {
+    background: #1a73e8;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.btn-google {
+    background: white;
+    color: #3c4043;
+    border: 1px solid #dadce0;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 3px solid #1a73e8;
+}
+
+.info {
+    list-style: none;
+}
+
+.info li {
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
+}

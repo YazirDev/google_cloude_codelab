@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard · GmailDashboard</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet">
+</head>
+
+<body>
+    <header class="topbar">
+        <a th:href="@{/}" class="brand">
+
+            GmailDashboard</a>
+
+        <nav>
+            <form th:action="@{/logout}" method="post">
+                <button type="submit" class="link-btn">Cerrar sesión</button>
+            </form>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="card profile">
+            <img th:src="${picture}" alt="Foto de perfil" class="avatar" />
+            <h1>Hola, <span th:text="${name}">Usuario</span></h1>
+            <ul class="info">
+                <li><strong>Correo:</strong> <span th:text="${email}"></span></li>
+                <li><strong>Idioma:</strong> <span th:text="${locale}"></span></li>
+                <li><strong>Acceso:</strong> <span th:text="${now}"></span></li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
