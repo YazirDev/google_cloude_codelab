@@ -10,6 +10,7 @@ body {
     color: #202124;
 }
 
+/* ── Topbar ── */
 .topbar {
     background: #1a73e8;
     color: white;
@@ -19,35 +20,65 @@ body {
     align-items: center;
 }
 
+.brand {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: .3px;
+}
+
+.link-btn {
+    background: none;
+    border: 1px solid rgba(255,255,255,.6);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: .9rem;
+}
+
+.link-btn:hover {
+    background: rgba(255,255,255,.15);
+}
+
+/* ── Layout ── */
 .container {
     max-width: 880px;
     margin: 32px auto;
     padding: 0 16px;
 }
 
+/* ── Cards ── */
 .card {
     background: white;
     padding: 28px;
     border-radius: 14px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
     margin-bottom: 24px;
 }
 
+/* ── Buttons ── */
 .btn-primary {
+    display: inline-block;
     background: #1a73e8;
     color: white;
     padding: 12px 22px;
     border-radius: 8px;
     text-decoration: none;
+    font-weight: 500;
 }
 
-.btn-google {
-    background: white;
-    color: #3c4043;
-    border: 1px solid #dadce0;
-    padding: 12px 22px;
-    border-radius: 8px;
-    text-decoration: none;
+.btn-primary:hover {
+    background: #1557b0;
+}
+
+/* ── Profile card ── */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
 }
 
 .avatar {
@@ -57,11 +88,116 @@ body {
     border: 3px solid #1a73e8;
 }
 
+.profile h1 {
+    font-size: 1.5rem;
+    color: #202124;
+}
+
 .info {
     list-style: none;
+    width: 100%;
 }
 
 .info li {
-    padding: 6px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #eee;
+    font-size: .95rem;
+}
+
+.info li:last-child {
+    border-bottom: none;
+}
+
+/* ── Hero (home) ── */
+.hero {
+    background: white;
+    padding: 48px 36px;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #5f6368;
+    margin-bottom: 28px;
+    font-size: 1rem;
+}
+
+.highlight {
+    color: #1a73e8;
+}
+
+/* ══════════════════════════════════
+   LOGIN PAGE
+══════════════════════════════════ */
+body.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f7fb;
+}
+
+.login-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+}
+
+.login-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,.10);
+    padding: 48px 40px 40px;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.login-logo {
+    margin-bottom: 4px;
+}
+
+.login-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #202124;
+}
+
+.login-subtitle {
+    color: #5f6368;
+    font-size: .93rem;
+    margin-bottom: 12px;
+}
+
+.btn-google {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    color: #3c4043;
+    border: 1px solid #dadce0;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: .95rem;
+    font-weight: 500;
+    width: 100%;
+    justify-content: center;
+    transition: background .15s, box-shadow .15s;
+}
+
+.btn-google:hover {
+    background: #f8f9fa;
+    box-shadow: 0 1px 6px rgba(0,0,0,.12);
 }

@@ -9,18 +9,14 @@
 
 <body>
     <header class="topbar">
-        <a th:href="@{/}" class="brand">
-
-            GmailDashboard</a>
-
+        <a th:href="@{/}" class="brand">GmailDashboard</a>
     </header>
     <main class="container">
         <section class="hero">
             <h1>Bienvenido a <span class="highlight">GmailDashboard</span></h1>
-            <p>Aplicación demostrativa de Spring Boot con páginas dinámicas
-                y autenticación con Gmail.</p>
+            <p>Aplicación demostrativa de Spring Boot con autenticación OAuth2 con Google.</p>
             <div th:if="${loggedIn}">
-                <p>Hola, <strong th:text="${name}">Usuario</strong>.</p>
+                <p style="margin-bottom:20px">Hola, <strong th:text="${name}">Usuario</strong>.</p>
                 <a th:href="@{/dashboard}" class="btn-primary">Ir al Dashboard</a>
             </div>
             <div th:unless="${loggedIn}">
